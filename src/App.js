@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <div style={{ 'height': '66.5px' }}></div>
+      <div style={{ 'height': '56px' }}></div>
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
