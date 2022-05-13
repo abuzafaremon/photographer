@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './SocialLogin.css';
 import google from '../../../images/social/google.png';
+import facebook from '../../../images/social/facebook2.png';
+import github from '../../../images/social/github.png';
 import Loading from '../../Shared/Loading/Loading';
 
 const SocialLogin = () => {
@@ -30,6 +32,14 @@ const SocialLogin = () => {
       <div className='social-login d-flex flex-column'>
         <button onClick={() => signInWithGoogle()} className='social-btn btn btn-success d-flex justify-content-center align-items-center mb-2'>
           <img className='social-icon' src={google} alt="" />
+          <span className=''>Google Log In</span>
+        </button>
+        <button className='social-btn btn btn-success d-flex justify-content-center align-items-center mb-2' disabled>
+          <img className='social-icon' src={facebook} alt="" />
+          <span className=''>Google Log In</span>
+        </button>
+        <button className='social-btn btn btn-success d-flex justify-content-center align-items-center mb-2' disabled>
+          <img className='social-icon' src={github} alt="" />
           <span className=''>Google Log In</span>
         </button>
       </div>
