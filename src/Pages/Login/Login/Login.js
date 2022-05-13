@@ -7,6 +7,13 @@ const Login = () => {
   const emailRef = useRef('');
   const passwordRef = useRef('');
 
+  const handleLogin = event => {
+    event.preventDefault();
+    navigate('/')
+    passwordRef.current.value = '';
+    emailRef.current.value = '';
+  }
+
   const navigateRegister = () => {
     navigate('/register');
   }
@@ -20,8 +27,8 @@ const Login = () => {
   }
   return (
     <div className='container w-25 mx-auto m-5' style={{ 'minWidth': '350px' }}>
-      <h2 className="text-center">Please Login</h2>
-      <Form>
+      <h2 className="text-center text-success">Please Login</h2>
+      <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3" >
           <Form.Control ref={emailRef} type="email" placeholder="Enter email" id="email" required />
         </Form.Group>
@@ -33,13 +40,13 @@ const Login = () => {
         {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group> */}
-        <Button className='w-100' variant="primary" type="submit">
+        <Button className='w-100' variant="success" type="submit">
           Login
         </Button>
       </Form>
       {/* {errorElement} */}
-      <p>Forgot Password? <button className='btn btn-link p-0 mb-1 text-decoration-none'>Reset Password</button></p>
-      <p>New to Service Provider? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+      <p>Forgot Password? <button className='btn btn-link text-success p-0 mb-1 text-decoration-none'>Reset Password</button></p>
+      <p>New to Service Provider? <Link to='/register' className='text-success text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
     </div>
   );
 };

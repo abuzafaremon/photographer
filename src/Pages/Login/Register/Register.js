@@ -9,6 +9,10 @@ const Register = () => {
   const emailRef = useRef('');
   const passwordRef = useRef('');
 
+  const handleRegister = event => {
+    event.preventDefault();
+  }
+
   const navigateLogin = () => {
     navigate('/login');
   }
@@ -22,8 +26,8 @@ const Register = () => {
   }
   return (
     <div className='container w-25 mx-auto m-5' style={{ 'minWidth': '350px' }}>
-      <h2 className="text-center">Please Register</h2>
-      <Form>
+      <h2 className="text-center text-success">Please Register</h2>
+      <Form onSubmit={handleRegister}>
         <Form.Group className="mb-3" >
           <Form.Control ref={nameRef} type="text" placeholder="Your Name" id="name" required />
         </Form.Group>
@@ -37,12 +41,12 @@ const Register = () => {
         {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group> */}
-        <Button className='w-100' variant="primary" type="submit">
+        <Button className='w-100' variant='success' type="submit">
           Register
         </Button>
       </Form>
       {/* {errorElement} */}
-      <p>Already have an account? <Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
+      <p>Already have an account? <Link to='/login' className='text-success text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
     </div>
   );
 };

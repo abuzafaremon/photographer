@@ -5,6 +5,11 @@
   scroll-padding-top: 66px;
 }
 
+.text-logo,
+.bg-logo {
+  color: #62b815;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
