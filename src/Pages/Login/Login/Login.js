@@ -1,7 +1,10 @@
+import { async } from '@firebase/util';
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -13,6 +16,7 @@ const Login = () => {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   const navigate = useNavigate();
   const emailRef = useRef('');
@@ -32,6 +36,10 @@ const Login = () => {
   if (loading) {
     return <Loading></Loading>
   }
+  let errorElement;
+  if (error) {
+    errorElement = <p className='text-danger'>Error: {error?.message}</p>
+  }
 
   const navigateRegister = () => {
     navigate('/register');
@@ -44,6 +52,18 @@ const Login = () => {
       pass.type = "password";
     }
   }
+
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast('Email Sent');
+    }
+    else {
+      toast('Please enter your email address');
+    }
+  }
+
   return (
     <div className='container w-25 mx-auto m-5' style={{ 'minWidth': '350px' }}>
       <h2 className="text-center text-success">Please Login</h2>
@@ -63,10 +83,11 @@ const Login = () => {
           Login
         </Button>
       </Form>
-      {/* {errorElement} */}
-      <p>Forgot Password? <button className='btn btn-link text-success p-0 mb-1 text-decoration-none'>Reset Password</button></p>
+      {errorElement}
+      <p>Forgot Password? <button onClick={resetPassword} className='btn btn-link text-success p-0 mb-1 text-decoration-none'>Reset Password</button></p>
       <p>New to Service Provider? <Link to='/register' className='text-success text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
       <SocialLogin></SocialLogin>
+      <ToastContainer />
     </div>
   );
 };
