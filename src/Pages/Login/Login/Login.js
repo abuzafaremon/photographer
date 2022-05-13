@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
   const [
@@ -65,6 +66,7 @@ const Login = () => {
       {/* {errorElement} */}
       <p>Forgot Password? <button className='btn btn-link text-success p-0 mb-1 text-decoration-none'>Reset Password</button></p>
       <p>New to Service Provider? <Link to='/register' className='text-success text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };
