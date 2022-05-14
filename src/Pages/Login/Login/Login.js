@@ -33,7 +33,7 @@ const Login = () => {
   if (user) {
     navigate(from, { replace: true });
   }
-  if (loading) {
+  if (loading || sending) {
     return <Loading></Loading>
   }
   let errorElement;

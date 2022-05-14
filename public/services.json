@@ -3,21 +3,21 @@
     "id": 1,
     "name": "Weeding Photography",
     "price": "$100",
-    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "description": "Capture your best moment with your life partner. And make your special day memorable. I will be your best weeding photographer",
     "img": "https://i.ibb.co/p67Kphq/jonathan-borba-eg-72f-I9w-K4-unsplash.jpg"
   },
   {
     "id": 2,
     "name": "Family Photography",
     "price": "$50",
-    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "description": "Any family event is important. Capture your enjoyable family moment with me. So that your next generation see this.",
     "img": "https://i.ibb.co/xfn2jJS/family.jpg"
   },
   {
     "id": 3,
     "name": "ClassRoom Event",
     "price": "$25",
-    "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+    "description": "Many time you arrange a event in your classroom with your friends, classmate, senior, junior. And this very important to capture this enjoyable moment with your friends. I will be your professional photographer",
     "img": "https://i.ibb.co/fHXsZMV/class.jpg"
   }
 ]
