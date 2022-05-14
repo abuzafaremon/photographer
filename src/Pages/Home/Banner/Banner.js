@@ -18,7 +18,7 @@ const Home = () => {
           alt="First slide"
         />
         <Carousel.Caption style={{ marginBottom: '' }}>
-          <h1 className='mb-4' style={{ 'font-size': '6vw' }}>Capture Your Precious Moments With Me</h1>
+          <h1 className='mb-4' style={{ 'fontSize': '6vw' }}>Capture Your Precious Moments With Me</h1>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -29,7 +29,7 @@ const Home = () => {
         />
 
         <Carousel.Caption>
-          <h1 className='mb-4' style={{ 'font-size': '6vw' }}>Capture Your Memorable Day With Me</h1>
+          <h1 className='mb-4' style={{ 'fontSize': '6vw' }}>Capture Your Memorable Day With Me</h1>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -40,7 +40,7 @@ const Home = () => {
         />
 
         <Carousel.Caption>
-          <h1 className='mb-4' style={{ 'font-size': '6vw' }}>Capture Your Enjoyable Moment With Me</h1>
+          <h1 className='mb-4' style={{ 'fontSize': '6vw' }}>Capture Your Enjoyable Moment With Me</h1>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

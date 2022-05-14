@@ -1,10 +1,20 @@
-# Getting Started with Create React App
+# Photography Service Provider
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Live Website Link](https://independent-service-prov-7c1de.web.app/)
 
-## Available Scripts
+## What I use in this project:
 
-In the project directory, you can run:
+- Google Authentication
+- Email Password Authentication
+
+
+## Technology Used:
+
+- React Router
+- React Bootstrap 
+- React Toastify
+- Firebase
+- React Firebase hooks
 
 ### `npm start`
 

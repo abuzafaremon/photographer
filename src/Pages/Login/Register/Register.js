@@ -13,7 +13,7 @@ const Register = () => {
     user,
     loading,
     error,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const navigate = useNavigate();
   const nameRef = useRef();
   const emailRef = useRef('');
@@ -45,7 +45,7 @@ const Register = () => {
     }
   }
   return (
-    <div className='container w-25 mx-auto m-5' style={{ 'minWidth': '350px' }}>
+    <div className='container w-25 mx-auto m-5 shadow' style={{ 'minWidth': '350px' }}>
       <h2 className="text-center text-success">Please Register</h2>
       <Form onSubmit={handleRegister}>
         <Form.Group className="mb-3" >

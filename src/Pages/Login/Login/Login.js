@@ -65,7 +65,7 @@ const Login = () => {
   }
 
   return (
-    <div className='container w-25 mx-auto m-5' style={{ 'minWidth': '350px' }}>
+    <div className='container w-25 mx-auto m-5 shadow' style={{ 'minWidth': '350px' }}>
       <h2 className="text-center text-success">Please Login</h2>
       <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3" >
